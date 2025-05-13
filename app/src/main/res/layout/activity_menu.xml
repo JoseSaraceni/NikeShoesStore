@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Cabeçalho -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cabecalho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="64dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_sandwich" />
+
+                <ImageView
+                    android:id="@+id/iv_nike"
+                    android:layout_width="54dp"
+                    android:layout_height="43dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_menu"
+                    app:layout_constraintStart_toEndOf="@+id/iv_menu"
+                    app:layout_constraintTop_toTopOf="@+id/iv_menu"
+                    app:srcCompat="@drawable/png_nike" />
+
+                <ImageView
+                    android:id="@+id/iv_user"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_nike"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toEndOf="@+id/iv_nike"
+                    app:layout_constraintTop_toTopOf="@+id/iv_nike"
+                    app:srcCompat="@drawable/image_user" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Card Principal -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_principal"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/background_card">
+
+                <!--Tenis Principal-->
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/png_tenis"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--20%-->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont"
+                    android:paddingStart="25dp"
+                    android:paddingTop="12dp"
+                    android:text="20%"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+                <!--De desconto-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont"
+                    android:paddingStart="85dp"
+                    android:paddingTop="25dp"
+                    android:text=" De Desconto"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <!--Na Sua Primeira Compra-->
+                <TextView
+                    android:id="@+id/tv_nasuacompra"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont"
+                    android:paddingStart="25dp"
+                    android:paddingTop="45dp"
+                    android:text="Na sua primeira compra"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <!--Compre Agora-->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/material_bottom_compre_agora"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/myfont"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:text="Compre Agora"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.822"
+                    app:strokeColor="#1D1D1D"
+                    app:strokeWidth="5dp">
+
+                </com.google.android.material.button.MaterialButton>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Layout botôes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scrollView3">
+
+                <!--  Todos  -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_todos"
+                    android:layout_width="72dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/myfont"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:text="Todos"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:cornerRadius="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.822"
+                    app:strokeColor="#1D1D1D"
+                    app:strokeWidth="5dp" />
+                <!--  Correndo  -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_correndo"
+                    android:layout_width="72dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/myfont"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:text="Correndo"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:cornerRadius="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.822" />
+                <!-- Tênis -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_Tênis"
+                    android:layout_width="72dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/myfont"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:text="Tênis"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:cornerRadius="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.822" />
+                <!--  Formal  -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_formal"
+                    android:layout_width="72dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/myfont"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:text="Formal"
+                    android:textColor="@color/grey"
+                    android:textSize="12sp"
+                    app:cornerRadius="20dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.822" />
+
+            </LinearLayout>
+            <!-- Layout 2 Primeiros Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scrollView3">
+
+                <!-- Air Max 97 -->
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/background_card"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:src="@drawable/air_97"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Air Max 97"
+                            android:fontFamily="@font/myfont"
+                            android:textStyle="bold"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="90dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="$ 120"
+                            android:fontFamily="@font/myfont"
+                            android:textStyle="bold"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="115dp"/>                          />
+                    </FrameLayout>
+                </LinearLayout>
+                <!-- TN -->
+                <LinearLayout
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/background_card"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:src="@drawable/tn"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="90dp"
+                            android:fontFamily="@font/myfont"
+                            android:text="Air Max TN"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="$ 299.99"
+                            android:fontFamily="@font/myfont"
+                            android:textStyle="bold"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginTop="115dp"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scrollView3">
+
+            <!-- Air Max 90 -->
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_card"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/air_90"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Air Max 90"
+                        android:fontFamily="@font/myfont"
+                        android:textStyle="bold"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="90dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$ 149.99"
+                        android:fontFamily="@font/myfont"
+                        android:textStyle="bold"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="115dp"/>                          />
+                </FrameLayout>
+
+            </LinearLayout>
+            <!-- 12 Molas -->
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_card"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/nike_12_molas"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shox 12 Molas"
+                        android:fontFamily="@font/myfont"
+                        android:textStyle="bold"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="90dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$ 490"
+                        android:fontFamily="@font/myfont"
+                        android:textStyle="bold"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="115dp"/>                          />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
